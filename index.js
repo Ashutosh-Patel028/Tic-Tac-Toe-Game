@@ -47,15 +47,16 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-    if (roundWon) {
-            announce(currentPlayer === 'X' ? PLAYERX_WON : PLAYERO_WON);
-            isGameActive = false;
-            return;
-        }
+        if (roundWon) {
+                announce(currentPlayer === 'X' ? PLAYERX_WON : PLAYERO_WON);
+                isGameActive = false;
+                return;
+            }
 
-    if (!board.includes(''))
-        announce(TIE);
+        if (!board.includes(''))
+            announce(TIE);
     }
+    
     const announce = (type) => {
         switch(type){
             case PLAYERO_WON:
